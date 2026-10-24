@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประโยชน์ของโปรตีน - WOLVITA</title>
+
+    <!-- Google Fonts & Font Awesome (Kanit & Noto Sans Thai) -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Style Sheet (ถอยออกไปดึงจากโฟลเดอร์หลัก) -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        body {
+            background-color: #0d1e17;
+            color: #ffffff;
+            font-family: 'Noto Sans Thai', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* สไตล์ปุ่ม Floating Facebook Chat มุมขวาล่าง */
+        .fb-float-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #1877F2;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 9999px;
+            box-shadow: 0 10px 25px -5px rgba(24, 119, 242, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .fb-float-btn:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 20px 30px -10px rgba(24, 119, 242, 0.7);
+            background-color: #166fe5;
+        }
+
+        .fb-float-btn::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 9999px;
+            background: #1877F2;
+            opacity: 0.4;
+            z-index: -1;
+            animation: fb-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes fb-ping {
+            75%, 100% {
+                transform: scale(1.15, 1.3);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#0d1e17] text-gray-100 selection:bg-emerald-500 selection:text-black font-['Noto_Sans_Thai',sans-serif]">
+
+<!-- Header Navbar -->
+<header class="w-full bg-[#11241c]/90 border-b border-[#1b382c] px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-md">
+    <!-- โลโก้ (ถอยกลับไปหน้าแรก) -->
+    <a href="../" class="flex items-center gap-2.5 text-emerald-400 font-bold text-xl font-['Kanit']">
+        <i class="fa-solid fa-leaf text-emerald-500"></i>
+        <span class="tracking-wide text-white">WOLVITA</span>
+    </a>
+
+    <!-- เมนูตรงกลาง -->
+    <nav id="nav-menu" class="hidden md:flex items-center gap-8 text-sm absolute md:relative top-full left-0 w-full md:w-auto bg-[#11241c] md:bg-transparent border-b md:border-b-0 border-[#1b382c] flex-col md:flex-row p-6 md:p-0 shadow-lg md:shadow-none transition-all duration-300">
+        <a href="../" class="text-gray-300 hover:text-emerald-400 transition-colors py-2 md:py-0">หน้าแรก</a>
+        <a href="./" class="text-emerald-400 font-semibold transition-colors py-2 md:py-0 border-b-2 border-emerald-400 pb-1">ประโยชน์ของโปรตีน</a>
+    </nav>
+
+    <!-- ฝั่งขวา: ปุ่มแฮมเบอร์เกอร์สำหรับมือถือ -->
+    <div class="flex items-center gap-3">
+        <button id="menu-btn" class="md:hidden text-gray-300 hover:text-emerald-400 text-2xl focus:outline-none p-1">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Section 1: Hero Banner Knowledge (ปรับแก้การแสดงผลพื้นหลังให้สวยงามพอดีทั้งมือถือและคอมพิวเตอร์) -->
+<section class="relative w-full min-h-[70vh] sm:min-h-[500px] sm:aspect-[16/9] flex items-center bg-cover sm:bg-contain bg-center bg-no-repeat bg-[#0d1e17] px-6 sm:px-12 py-16 sm:py-0 overflow-hidden border-b border-[#1b382c]" style="background-image: linear-gradient(to bottom, rgba(13, 30, 23, 0.9) 0%, rgba(13, 30, 23, 0.8) 100%), url('../images/1920x1080.png');">
+    
+    <div class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+        <!-- ข้อความซ้อนทับด้านซ้าย -->
+        <div class="flex-1 text-center lg:text-left">
+            <div class="flex items-center justify-center lg:justify-start gap-2 mb-3">
+                <span class="text-xs sm:text-sm font-bold tracking-[0.2em] text-emerald-400 uppercase font-['Kanit']">NUTRITION KNOWLEDGE</span>
+                <span class="w-12 h-[2px] bg-emerald-500 hidden sm:inline-block"></span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 font-['Kanit'] tracking-tight">
+                โปรตีน<br>
+                <span class="text-emerald-400">สารอาหารสำคัญที่ร่างกายขาดไม่ได้</span>
+            </h1>
+
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0 font-light mb-8">
+                โปรตีนเป็นสารอาหารที่ช่วยสร้างและซ่อมแซมเนื้อเยื่อ รวมถึงเป็นเกราะให้ต่อมและสร้างเอนไซม์ ฮอร์โมน และสารสำคัญต่าง ๆ ที่จำเป็นต่อการทำงานของร่างกาย
+            </p>
+
+            <div class="flex items-center justify-center lg:justify-start">
+                <a href="#why-protein" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-7 py-3.5 rounded-full transition-all duration-300 flex items-center gap-2.5 shadow-lg shadow-emerald-950/40">
+                    <span>ทำไมต้องโปรตีน?</span>
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- ฝั่งขวาปล่อยโล่งเพื่อเปิดให้เห็นภาพพื้นหลังด้านหลังชัดเจน -->
+        <div class="flex-1 hidden lg:block"></div>
+    </div>
+</section>
+
+<!-- Section 2: OUR PRODUCT (โปรตีนจากพืชกับ WOLVITA) -->
+<section id="why-protein" class="py-20 px-6 bg-gradient-to-b from-[#0d1e17] via-[#11241c] to-[#0a1712]">
+    <div class="max-w-7xl mx-auto text-center mb-16">
+        <div class="flex items-center justify-center gap-2 mb-3">
+            <span class="w-10 h-[2px] bg-emerald-400"></span>
+            <span class="text-xs sm:text-sm font-bold tracking-[0.25em] text-emerald-400 uppercase font-['Kanit']">OUR PRODUCT</span>
+            <span class="w-10 h-[2px] bg-emerald-400"></span>
+        </div>
+        
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-['Kanit'] mb-4 tracking-tight">
+            โปรตีนจากพืชกับ WOLVITA
+        </h2>
+        <p class="text-gray-300 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed">
+            อัดแน่นด้วยโปรตีนคุณภาพจากพืช พร้อมสารสกัดจากธรรมชาติ<br class="hidden sm:inline">
+            ให้คุณได้รับโปรตีนอย่างครบถ้วน ในทุกมื้อของวัน
+        </p>
+
+        <!-- ไอคอนจุดเด่น 3 ข้อ -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
+            <!-- จุดเด่น 1 -->
+            <div class="flex items-center justify-center gap-4 bg-[#14281f]/80 border border-[#1b382c] rounded-full p-4 sm:px-6 hover:border-emerald-500/50 transition-all duration-300 shadow-lg">
+                <div class="w-12 h-12 rounded-full border-2 border-emerald-400 flex items-center justify-center text-emerald-400 text-xl flex-shrink-0">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="text-left">
+                    <div class="text-white font-bold font-['Kanit'] text-sm sm:text-base">โปรตีน 12 กรัม</div>
+                    <div class="text-emerald-400 text-xs">ต่อ 1 ซอง</div>
+                </div>
+            </div>
+
+            <!-- จุดเด่น 2 -->
+            <div class="flex items-center justify-center gap-4 bg-[#14281f]/80 border border-[#1b382c] rounded-full p-4 sm:px-6 hover:border-emerald-500/50 transition-all duration-300 shadow-lg">
+                <div class="w-12 h-12 rounded-full border-2 border-emerald-400 flex items-center justify-center text-emerald-400 text-xl flex-shrink-0">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="text-left">
+                    <div class="text-white font-bold font-['Kanit'] text-sm sm:text-base">ไม่มีน้ำตาล</div>
+                    <div class="text-emerald-400 text-xs">(0% Sugar)</div>
+                </div>
+            </div>
+
+            <!-- จุดเด่น 3 -->
+            <div class="flex items-center justify-center gap-4 bg-[#14281f]/80 border border-[#1b382c] rounded-full p-4 sm:px-6 hover:border-emerald-500/50 transition-all duration-300 shadow-lg">
+                <div class="w-12 h-12 rounded-full border-2 border-emerald-400 flex items-center justify-center text-emerald-400 text-xl flex-shrink-0">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <div class="text-left">
+                    <div class="text-white font-bold font-['Kanit'] text-sm sm:text-base">พลังงานต่ำ</div>
+                    <div class="text-emerald-400 text-xs">เพียง 130 kcal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- รายละเอียดประโยชน์เพิ่มเติม -->
+    <div class="max-w-5xl mx-auto bg-[#11241c] border border-[#1b382c] rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <h3 class="text-xl sm:text-2xl font-bold text-emerald-400 mb-6 font-['Kanit'] flex items-center gap-2">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>ประโยชน์ของโปรตีนที่ทำมาจากไข่ผำ</span>
+        </h3>
+        <p class="text-gray-300 mb-6 leading-relaxed font-light text-sm sm:text-base">
+            Wolvita Green Wolffia คือผลิตภัณฑ์โปรตีนจากพืชที่มีส่วนผสมหลักจาก **ไข่ผำ (Wolffia globosa)** พืชจิ๋วที่เป็น Superfood ระดับโลก อุดมด้วยสารอาหารครบถ้วนตามธรรมชาติ เหมาะสำหรับผู้ที่ต้องการดูแลสุขภาพ เสริมสร้างกล้ามเนื้อ และเติมโปรตีนสะอาดในทุก ๆ วัน
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-200">
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#0d1e17]/60 border border-[#1b382c]">
+                <i class="fas fa-check-circle text-emerald-400 mt-1 flex-shrink-0"></i>
+                <span><b>ไขมันต่ำ ไม่มีคอเลสเตอรอล:</b> ดีต่อหัวใจและสุขภาพโดยรวม</span>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#0d1e17]/60 border border-[#1b382c]">
+                <i class="fas fa-check-circle text-emerald-400 mt-1 flex-shrink-0"></i>
+                <span><b>รสชาติอร่อย ดื่มง่าย:</b> ทานง่าย ไม่เหม็นเขียว ดื่มได้ทุกวัน</span>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#0d1e17]/60 border border-[#1b382c]">
+                <i class="fas fa-check-circle text-emerald-400 mt-1 flex-shrink-0"></i>
+                <span><b>ย่อยง่าย สบายท้อง:</b> ปราศจากแลคโตส เหมาะสำหรับผู้แพ้นมวัว</span>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#0d1e17]/60 border border-[#1b382c]">
+                <i class="fas fa-check-circle text-emerald-400 mt-1 flex-shrink-0"></i>
+                <span><b>อุดมด้วยใยอาหาร:</b> ช่วยให้อิ่มนาน และส่งเสริมระบบขับถ่าย</span>
+            </div>
+        </div>
+
+        <!-- ส่วนลิงก์ Certificate -->
+        <div class="pt-8 mt-8 border-t border-[#1b382c]">
+            <h4 class="text-lg font-semibold text-white mb-2 font-['Kanit']">ใบรับรองมาตรฐานและความปลอดภัย</h4>
+            <p class="text-gray-400 mb-6 text-xs sm:text-sm font-light">โปรตีนไข่ผำของเราผ่านการรับรองจากหน่วยงานมาตรฐานสากล เพื่อให้คุณมั่นใจได้ในทุกซองที่บริโภค</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="path/to/certificate1.pdf" target="_blank" class="bg-[#0d1e17] hover:bg-[#162e23] border border-[#1b382c] hover:border-emerald-500/50 rounded-xl p-4 flex items-center gap-4 transition-all duration-300 group">
+                    <div class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 p-3 rounded-lg text-lg flex-shrink-0">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="font-medium text-white group-hover:text-emerald-400 transition-colors text-xs sm:text-sm">ใบรับรอง อย. (FDA)</div>
+                        <div class="text-[11px] text-gray-400">ตรวจสอบเลขทะเบียน อย.</div>
+                    </div>
+                </a>
+
+                <a href="path/to/certificate2.pdf" target="_blank" class="bg-[#0d1e17] hover:bg-[#162e23] border border-[#1b382c] hover:border-emerald-500/50 rounded-xl p-4 flex items-center gap-4 transition-all duration-300 group">
+                    <div class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 p-3 rounded-lg text-lg flex-shrink-0">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="font-medium text-white group-hover:text-emerald-400 transition-colors text-xs sm:text-sm">ใบรับรอง GMP/HACCP</div>
+                        <div class="text-[11px] text-gray-400">มาตรฐานการผลิต</div>
+                    </div>
+                </a>
+
+                <a href="path/to/certificate3.pdf" target="_blank" class="bg-[#0d1e17] hover:bg-[#162e23] border border-[#1b382c] hover:border-emerald-500/50 rounded-xl p-4 flex items-center gap-4 transition-all duration-300 group">
+                    <div class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 p-3 rounded-lg text-lg flex-shrink-0">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <div class="font-medium text-white group-hover:text-emerald-400 transition-colors text-xs sm:text-sm">ใบรับรอง Organic</div>
+                        <div class="text-[11px] text-gray-400">มาตรฐานเกษตรอินทรีย์</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full bg-[#050c08] border-t border-[#1b382c] py-6 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <div>&copy; WOLVITA. All rights reserved.</div>
+    </div>
+</footer>
+
+<!-- ปุ่มสั่งซื้อผ่าน Facebook ลอยมุมขวาล่าง -->
+<a href="https://www.facebook.com/wolvitaofficial" target="_blank" rel="noopener noreferrer" class="fb-float-btn group" title="ไปที่หน้าเพจ Facebook">
+    <i class="fa-brands fa-facebook-messenger text-2xl group-hover:rotate-12 transition-transform"></i>
+    <span class="font-['Kanit'] font-medium text-sm hidden sm:inline">สั่งซื้อผ่าน Facebook</span>
+</a>
+
+<!-- Script เปิด-ปิดเมนูบนมือถือ -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                if (navMenu.classList.contains('hidden')) {
+                    navMenu.classList.remove('hidden');
+                    navMenu.classList.add('flex');
+                } else {
+                    navMenu.classList.add('hidden');
+                    navMenu.classList.remove('flex');
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
